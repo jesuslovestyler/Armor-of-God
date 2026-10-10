@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="icon" href="data:," />
+  <title>The Armor of God — Ephesians 6</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Libre+Franklin:ital,wght@0,400;0,600;1,400&display=swap');
+    :root {
+      --ink:#182028; --muted:#53606b; --paper:#f5f1e8; --panel:#fffdf7;
+      --gold:#a66b20; --gold-soft:#e3c681; --line:#c9b98e; --night:#162330;
+      --shadow:rgba(31,25,13,.12); --fire:#c24f25; --sage:#3f6356;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --ink:#f2ead9; --muted:#c8beab; --paper:#101923; --panel:#18242e;
+        --gold:#e1b45f; --gold-soft:#806536; --line:#5a513e; --night:#080e15;
+        --shadow:rgba(0,0,0,.35); --fire:#e47849; --sage:#92b5a1;
+      }
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:"Libre Franklin",sans-serif;line-height:1.65}
+    a{color:inherit}
+    .hero{position:relative;min-height:92svh;overflow:hidden;display:grid;align-items:end;background:var(--night);color:#fff9ed;padding:clamp(30px,6vw,76px) max(22px,calc((100vw - 1120px)/2)) 54px}
+    .sky{position:absolute;inset:0;background:linear-gradient(180deg,#07121e 0%,#1e3544 42%,#d1773f 72%,#f0bd72 87%,#17212a 87.3%)}
+    .sky::before{content:"";position:absolute;width:min(44vw,430px);aspect-ratio:1;border-radius:50%;left:50%;bottom:4%;transform:translateX(-50%);background:radial-gradient(circle,#fff7d8 0 12%,#ffc868 13% 35%,rgba(236,129,57,.28) 48%,transparent 70%)}
+    .ridge,.ridge2{position:absolute;left:-5%;right:-5%;bottom:0;height:31%;background:#111b23;clip-path:polygon(0 65%,8% 46%,15% 60%,25% 25%,34% 64%,43% 36%,51% 65%,61% 28%,69% 58%,80% 18%,89% 56%,100% 38%,100% 100%,0 100%)}
+    .ridge2{height:22%;opacity:.75;background:#263541;clip-path:polygon(0 45%,12% 62%,23% 32%,33% 70%,44% 39%,54% 71%,67% 38%,79% 69%,91% 34%,100% 58%,100% 100%,0 100%)}
+    .hero-inner{position:relative;z-index:2;max-width:920px}
+    .reference{font-family:"Barlow Condensed",sans-serif;text-transform:uppercase;letter-spacing:.16em;color:#f0cb83;font-weight:700;font-size:.9rem}
+    h1{font-family:"Barlow Condensed",sans-serif;text-transform:uppercase;font-size:clamp(4rem,12vw,9rem);line-height:.82;letter-spacing:-.03em;margin:14px 0 25px;max-width:850px;text-wrap:balance}
+    .hero blockquote{margin:0;max-width:760px;font-size:clamp(1.2rem,2.4vw,1.75rem);line-height:1.5;font-weight:600}
+    .hero blockquote span{color:#f0cb83}
+    .intro{max-width:920px;margin:auto;padding:76px 24px 64px;display:grid;grid-template-columns:1fr 1.3fr;gap:clamp(30px,7vw,90px);align-items:start}
+    .intro h2,.final h2{font-family:"Barlow Condensed",sans-serif;text-transform:uppercase;font-size:clamp(2.5rem,6vw,4.8rem);line-height:.95;margin:0;color:var(--gold)}
+    .intro p{margin:0;font-size:1.12rem}
+    .stand{font-size:1.32rem!important;font-weight:600;margin-top:20px!important}
+    .route{position:sticky;top:0;z-index:8;background:color-mix(in srgb,var(--paper) 94%,transparent);border-block:1px solid var(--line);backdrop-filter:blur(12px);padding:10px 16px;display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
+    .route a{text-decoration:none;font-family:"Barlow Condensed",sans-serif;text-transform:uppercase;letter-spacing:.05em;font-weight:700;font-size:.92rem;padding:6px 9px;color:var(--muted)}
+    .route a:hover,.route a:focus{color:var(--gold);outline:none;text-decoration:underline;text-underline-offset:4px}
+    .pieces{max-width:1120px;margin:auto;padding:70px 24px 100px}
+    .piece{min-height:70vh;display:grid;grid-template-columns:minmax(250px,.8fr) 1.25fr;gap:clamp(30px,8vw,110px);align-items:center;border-bottom:1px solid var(--line);padding:70px 0;scroll-margin-top:70px}
+    .piece:nth-child(even){grid-template-columns:1.25fr minmax(250px,.8fr)}
+    .piece:nth-child(even) .emblem{order:2}
+    .emblem{display:grid;place-items:center;position:relative;min-height:310px}
+    .emblem::before{content:"";position:absolute;width:250px;height:250px;border:1px solid var(--line);transform:rotate(45deg);background:var(--panel);box-shadow:0 22px 60px var(--shadow)}
+    .symbol{position:relative;font-family:"Barlow Condensed",sans-serif;color:var(--gold);font-weight:800;font-size:clamp(5rem,10vw,8rem);line-height:1;text-align:center;text-transform:uppercase;letter-spacing:-.06em}
+    .symbol.word{font-size:clamp(2.25rem,3.4vw,3.2rem);letter-spacing:.01em;max-width:none;line-height:.92}
+    .piece-no{font-family:"Barlow Condensed",sans-serif;color:var(--gold);letter-spacing:.12em;text-transform:uppercase;font-weight:700}
+    .piece h3{font-family:"Barlow Condensed",sans-serif;text-transform:uppercase;font-size:clamp(2.6rem,6vw,5rem);line-height:.95;margin:9px 0 22px;letter-spacing:-.02em}
+    .verse{font-size:clamp(1.2rem,2.5vw,1.55rem);font-weight:600;line-height:1.5;margin:0 0 25px}
+    .verse sup{color:var(--gold);font-family:"Barlow Condensed",sans-serif;font-size:.75em}
+    .reflection{color:var(--muted);font-size:1.05rem;max-width:600px;margin:0}
+    .fire .emblem::before{border-color:var(--fire);box-shadow:0 20px 60px color-mix(in srgb,var(--fire) 18%,transparent)}
+    .peace .symbol{color:var(--sage)}
+    .final{background:var(--night);color:#f5edde;padding:90px max(24px,calc((100vw - 980px)/2));position:relative;overflow:hidden}
+    .final::before{content:"";position:absolute;inset:0;background:linear-gradient(145deg,transparent 68%,rgba(225,180,95,.08));pointer-events:none}
+    .final h2{color:#edc879;margin-bottom:35px}
+    .passage{position:relative;display:grid;gap:17px;font-size:clamp(1.06rem,2vw,1.3rem);line-height:1.75}
+    .passage p{margin:0}
+    .passage sup{color:#edc879;font-family:"Barlow Condensed",sans-serif;font-weight:700;margin-right:7px}
+    .source{position:relative;margin-top:38px;padding-top:24px;border-top:1px solid #43515a;color:#cfc6b4;font-size:.9rem}
+    .source a{color:#edc879;text-underline-offset:3px}
+    .closing{padding:90px 24px;text-align:center;max-width:800px;margin:auto}
+    .closing p:first-child{font-family:"Barlow Condensed",sans-serif;font-size:clamp(3rem,8vw,6.5rem);line-height:.9;text-transform:uppercase;font-weight:800;color:var(--gold);margin:0 0 30px}
+    .closing p:last-child{font-size:1.15rem;margin:0;color:var(--muted)}
+    @media(max-width:720px){
+      .hero{min-height:82svh;padding-bottom:42px}.intro{grid-template-columns:1fr;padding-top:58px}.route{justify-content:flex-start}.route a{font-size:.82rem;padding:4px 6px}.pieces{padding-top:20px}.piece,.piece:nth-child(even){grid-template-columns:1fr;min-height:auto;padding:65px 0;gap:22px}.piece:nth-child(even) .emblem{order:0}.emblem{min-height:240px}.emblem::before{width:180px;height:180px}.symbol{font-size:5.6rem}.symbol.word{font-size:2.35rem;max-width:none}.piece h3{font-size:3.25rem}.final{padding-top:74px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+  <section class="hero" aria-labelledby="page-title">
+    <div class="sky" aria-hidden="true"></div><div class="ridge2" aria-hidden="true"></div><div class="ridge" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <div class="reference">Ephesians 6:10–18 · World English Bible</div>
+      <h1 id="page-title">The Armor<br>of God</h1>
+      <blockquote>“Finally, be strong in the Lord, and in the strength of his might.” <span>— 6:10</span></blockquote>
+    </div>
+  </section>
+
+  <section class="intro">
+    <h2>Stand<br>therefore.</h2>
+    <div><p>This is not a call to panic, posture, or human bravado. The strength is the Lord’s; the armor is God’s. The command is to receive what he provides—and stand.</p><p class="stand">“Put on the whole armor of God, that you may be able to stand against the wiles of the devil.” <sup>6:11</sup></p></div>
+  </section>
+
+  <nav class="route" aria-label="Armor sections">
+    <a href="#battle">Battle</a><a href="#truth">Truth</a><a href="#righteousness">Righteousness</a><a href="#peace">Peace</a><a href="#faith">Faith</a><a href="#salvation">Salvation</a><a href="#word">The Word</a><a href="#prayer">Prayer</a>
+  </nav>
+
+  <main class="pieces">
+    <article class="piece" id="battle">
+      <div class="emblem"><div class="symbol word">Not flesh<br>&amp; blood</div></div>
+      <div><div class="piece-no">Know the battle · 6:12</div><h3>See the true struggle</h3><p class="verse">“For our wrestling is not against flesh and blood, but against the principalities, against the powers, against the world’s rulers of the darkness of this age, and against the spiritual forces of wickedness in the heavenly places.”</p><p class="reflection">People are not the enemy. Paul lifts our eyes beyond resentment and retaliation. Spiritual clarity makes room to resist evil without turning our neighbors into targets.</p></div>
+    </article>
+
+    <article class="piece" id="truth">
+      <div class="emblem"><div class="symbol">I</div></div>
+      <div><div class="piece-no">The belt · 6:14</div><h3>Truth</h3><p class="verse">“Stand therefore, having the utility belt of truth buckled around your waist…”</p><p class="reflection">Truth gathers everything together. God’s character, Christ’s promises, and honest speech steady us when confusion presses in. We do not have to invent courage; we fasten ourselves to what is true.</p></div>
+    </article>
+
+    <article class="piece" id="righteousness">
+      <div class="emblem"><div class="symbol">II</div></div>
+      <div><div class="piece-no">The breastplate · 6:14</div><h3>Righteousness</h3><p class="verse">“…and having put on the breastplate of righteousness,”</p><p class="reflection">Righteousness guards the heart. We stand in the righteousness given through Christ, and we walk in the obedience that flows from it—not to earn his welcome, but because we have received it.</p></div>
+    </article>
+
+    <article class="piece peace" id="peace">
+      <div class="emblem"><div class="symbol">III</div></div>
+      <div><div class="piece-no">The shoes · 6:15</div><h3>The Good News of peace</h3><p class="verse">“…and having fitted your feet with the preparation of the Good News of peace,”</p><p class="reflection">The gospel makes the feet ready. Reconciled to God through Jesus Christ, we carry peace rather than panic. We can move toward others with firm footing and good news.</p></div>
+    </article>
+
+    <article class="piece fire" id="faith">
+      <div class="emblem"><div class="symbol">IV</div></div>
+      <div><div class="piece-no">The shield · 6:16</div><h3>Faith</h3><p class="verse">“Above all, taking up the shield of faith, with which you will be able to quench all the fiery darts of the evil one.”</p><p class="reflection">Faith meets the flaming accusation, fear, and lie with the trustworthiness of God. The shield is not confidence in our own grip; it is confidence in the One who holds us.</p></div>
+    </article>
+
+    <article class="piece" id="salvation">
+      <div class="emblem"><div class="symbol">V</div></div>
+      <div><div class="piece-no">The helmet · 6:17</div><h3>Salvation</h3><p class="verse">“And take the helmet of salvation…”</p><p class="reflection">Salvation guards the mind with settled hope. Christ has acted, Christ saves, and Christ will finish what he began. We face the day remembering whose we are and where our rescue rests.</p></div>
+    </article>
+
+    <article class="piece" id="word">
+      <div class="emblem"><div class="symbol">VI</div></div>
+      <div><div class="piece-no">The sword · 6:17</div><h3>The Spirit’s sword</h3><p class="verse">“…and the sword of the Spirit, which is the word of God;”</p><p class="reflection">God’s word is not a slogan or a weapon against people. In the Spirit’s hand it exposes lies, names what is real, and gives us Christ’s own words to answer temptation with truth.</p></div>
+    </article>
+
+    <article class="piece" id="prayer">
+      <div class="emblem"><div class="symbol word">At all<br>times</div></div>
+      <div><div class="piece-no">The watch · 6:18</div><h3>Praying always</h3><p class="verse">“With all prayer and requests, praying at all times in the Spirit, and being watchful to this end in all perseverance and requests for all the saints.”</p><p class="reflection">Prayer is not an accessory laid beside the armor. It is the watchful, persevering life of dependence that runs through it all. We remain awake to God, and we do not stand alone—we pray for all the saints.</p></div>
+    </article>
+  </main>
+
+  <section class="final" aria-labelledby="full-text">
+    <h2 id="full-text">The full passage</h2>
+    <div class="passage">
+      <p><sup>10</sup>Finally, be strong in the Lord, and in the strength of his might.</p>
+      <p><sup>11</sup>Put on the whole armor of God, that you may be able to stand against the wiles of the devil.</p>
+      <p><sup>12</sup>For our wrestling is not against flesh and blood, but against the principalities, against the powers, against the world’s rulers of the darkness of this age, and against the spiritual forces of wickedness in the heavenly places.</p>
+      <p><sup>13</sup>Therefore put on the whole armor of God, that you may be able to withstand in the evil day, and having done all, to stand.</p>
+      <p><sup>14</sup>Stand therefore, having the utility belt of truth buckled around your waist, and having put on the breastplate of righteousness,</p>
+      <p><sup>15</sup>and having fitted your feet with the preparation of the Good News of peace,</p>
+      <p><sup>16</sup>above all, taking up the shield of faith, with which you will be able to quench all the fiery darts of the evil one.</p>
+      <p><sup>17</sup>And take the helmet of salvation, and the sword of the Spirit, which is the word of God;</p>
+      <p><sup>18</sup>with all prayer and requests, praying at all times in the Spirit, and being watchful to this end in all perseverance and requests for all the saints.</p>
+    </div>
+    <div class="source">Ephesians 6:10–18, <a href="https://www.choothomas.org/bible/world_english_bible/eph06.htm" target="_blank" rel="noopener noreferrer">World English Bible</a>. The World English Bible is in the public domain.</div>
+  </section>
+
+  <footer class="closing">
+    <p>Having done all,<br>to stand.</p>
+    <p>The dawn does not ask whether the night was long. Stand in the strength of his might.</p>
+  </footer>
+</body>
+</html>
