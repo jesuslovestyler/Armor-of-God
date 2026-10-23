@@ -1,7 +1,8 @@
-# The Armor of God — Ephesians 6
+# Put On the Whole Armor of God
 
-The armor of God from Ephesians 6:10-18, presented piece by piece: the belt of truth, the breastplate of righteousness, shoes of the gospel of peace, the shield of faith, the helmet of salvation, the sword of the Spirit, and prayer.
+An interactive devotional on the whole armor of God from Ephesians 6, piece by piece: the belt of truth, the breastplate of righteousness, the shoes of the gospel of peace, the shield of faith, the helmet of salvation, and the sword of the Spirit.
 
-Scripture quotations from the World English Bible (public domain).
+**Live:** https://jesuslovestyler.github.io/Armor-of-God/
+**Home:** https://jesuslovestyler.com/
 
-Built with Muse artifacts. Released into the public domain.
+Scripture is quoted from the World English Bible, a public-domain translation. Released into the public domain (Unlicense — see LICENSE). Built by Tyler with Noki.
